@@ -1,0 +1,909 @@
+/* ==========================================================================
+   PORTAL FEATURES STYLESHEET
+   Course Registration, Timetable, Fees, Gate Pass, Hostel, Exam Card, etc.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. COURSE REGISTRATION
+   ========================================================================== */
+.reg-banner {
+  background: linear-gradient(135deg, rgba(24, 201, 163, 0.15) 0%, rgba(33, 168, 154, 0.08) 100%);
+  border: 1px solid var(--primary-turquoise);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.reg-semester-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.reg-tab-btn {
+  flex: 1;
+  padding: 10px 14px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.reg-tab-btn.active {
+  background: var(--primary-teal);
+  color: #FFFFFF;
+  border-color: var(--deep-teal);
+}
+
+.unit-reg-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.unit-reg-card:hover {
+  border-color: var(--primary-turquoise);
+  background-color: rgba(24, 201, 163, 0.03);
+}
+
+.unit-reg-card.selected {
+  border-color: var(--primary-teal);
+  background-color: rgba(24, 201, 163, 0.08);
+}
+
+.unit-reg-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary-teal);
+  cursor: pointer;
+}
+
+.unit-reg-details {
+  flex: 1;
+}
+
+.unit-reg-code {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--dark-nav-blue);
+}
+
+[data-theme="dark"] .unit-reg-code {
+  color: var(--nav-accent-blue);
+}
+
+.unit-reg-name {
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+.unit-reg-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+
+.reg-summary-sticky {
+  position: sticky;
+  bottom: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-lg);
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 50;
+}
+
+/* ==========================================================================
+   2. TIMETABLE
+   ========================================================================== */
+.timetable-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.day-filter-btn {
+  padding: 6px 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.day-filter-btn.active {
+  background: var(--primary-teal);
+  color: #FFFFFF;
+  border-color: var(--deep-teal);
+}
+
+.timetable-slot {
+  background: var(--card-bg);
+  border-left: 4px solid var(--primary-teal);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform var(--transition-fast);
+}
+
+.timetable-slot:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.slot-time-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--deep-teal);
+  font-weight: 700;
+}
+
+[data-theme="dark"] .slot-time-row {
+  color: var(--primary-turquoise);
+}
+
+.slot-unit-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.slot-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.venue-badge {
+  background: var(--section-green-light);
+  color: var(--section-green);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+/* ==========================================================================
+   3. FEE STATEMENT & LEDGER (Exact Reference Layout)
+   ========================================================================== */
+.fee-statement-page {
+  margin-bottom: 24px;
+}
+
+.fee-page-header {
+  margin-bottom: 14px;
+}
+
+.fee-main-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+}
+
+.fee-statement-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+[data-theme="dark"] .fee-statement-card {
+  background: var(--card-bg);
+}
+
+/* Top Action Bar */
+.fee-card-top-bar {
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+[data-theme="dark"] .fee-card-top-bar {
+  background: var(--card-bg);
+}
+
+/* Pink/Red Print Button */
+.btn-print-fee-statement {
+  background-color: #E11D48;
+  color: #FFFFFF;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(225, 29, 72, 0.3);
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+
+.btn-print-fee-statement:hover {
+  background-color: #BE123C;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(225, 29, 72, 0.4);
+}
+
+.btn-print-fee-statement:active {
+  transform: translateY(0);
+}
+
+/* Search & Filter Box */
+.fee-search-filter-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 260px;
+  flex: 1;
+  max-width: 380px;
+}
+
+.fee-filter-icon {
+  position: absolute;
+  left: 11px;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.fee-filter-input {
+  width: 100%;
+  padding: 8px 30px 8px 34px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-primary);
+  background: var(--card-subtle);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.fee-filter-input:focus {
+  border-color: var(--primary-teal);
+  background: #FFFFFF;
+}
+
+.fee-filter-clear {
+  position: absolute;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+/* Fee Print Header (Hidden on screen, visible on print/export) */
+.fee-print-header {
+  display: none;
+  padding: 20px 24px 14px;
+  border-bottom: 2px solid #111827;
+  background: #FFFFFF;
+}
+
+.fee-print-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.fee-print-crest {
+  width: 60px;
+  height: 60px;
+}
+
+.fee-print-titles h2 {
+  font-size: 18px;
+  font-weight: 900;
+  color: #1E3A8A;
+  letter-spacing: 0.5px;
+}
+
+.fee-print-titles h3 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.fee-print-titles p {
+  font-size: 11px;
+  color: #6B7280;
+}
+
+.fee-print-student-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 20px;
+  font-size: 12px;
+  padding: 8px 12px;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+}
+
+.fee-info-row {
+  display: flex;
+  gap: 8px;
+}
+
+.info-tag {
+  color: #6B7280;
+  font-weight: 600;
+}
+
+.info-val {
+  color: #111827;
+}
+
+/* Responsive Table Container */
+.fee-table-responsive-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fee-transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  text-align: left;
+}
+
+/* Dark Table Header */
+.fee-table-dark-header {
+  background-color: #111827 !important;
+  color: #FFFFFF !important;
+}
+
+.fee-table-dark-header th {
+  padding: 12px 14px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border-bottom: 2px solid #374151;
+  white-space: nowrap;
+}
+
+.fee-transaction-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+/* Alternating Row Striping */
+.fee-row.row-odd {
+  background-color: #FFFFFF;
+}
+
+.fee-row.row-even {
+  background-color: #F8FAFC;
+}
+
+[data-theme="dark"] .fee-row.row-odd {
+  background-color: #1E293B;
+}
+
+[data-theme="dark"] .fee-row.row-even {
+  background-color: #182234;
+}
+
+.fee-row:hover {
+  background-color: rgba(24, 201, 163, 0.06);
+}
+
+.col-date, .fee-date-cell {
+  width: 100px;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.col-ref, .fee-ref-cell {
+  width: 110px;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--dark-nav-blue);
+}
+
+[data-theme="dark"] .fee-ref-cell {
+  color: var(--nav-accent-blue);
+}
+
+.col-desc, .fee-desc-cell {
+  min-width: 200px;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.col-amount, .fee-amount-cell {
+  width: 115px;
+  font-family: var(--font-mono);
+  text-align: right;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.debit-cell {
+  color: var(--text-primary);
+}
+
+.credit-cell {
+  color: var(--section-green);
+  font-weight: 600;
+}
+
+.balance-cell {
+  font-weight: 700;
+  color: var(--dark-nav-blue);
+}
+
+[data-theme="dark"] .balance-cell {
+  color: #FFFFFF;
+}
+
+.balance-cell.negative-balance {
+  color: #059669;
+}
+
+.fee-empty-notice {
+  padding: 30px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 13.5px;
+}
+
+/* Dark Navy Bottom Summary / Footer Bar */
+.fee-bottom-summary-bar {
+  background: linear-gradient(135deg, #1E2E4C 0%, #263B61 100%);
+  color: #FFFFFF;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 2px solid #374151;
+}
+
+.summary-balance-badge {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.summary-balance-label {
+  font-size: 13.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #E2E8F0;
+}
+
+.summary-balance-value {
+  font-size: 18px;
+  font-weight: 900;
+  color: #FCD34D;
+  font-family: var(--font-mono);
+}
+
+.summary-totals-cluster {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-left: auto;
+}
+
+.summary-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.summary-col-label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  color: #94A3B8;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.summary-col-value {
+  font-size: 15px;
+  font-weight: 800;
+  font-family: var(--font-mono);
+}
+
+.gold-text {
+  color: #FCD34D;
+}
+
+/* Print Signatures Block */
+.fee-print-signatures {
+  display: none;
+  padding: 24px 20px 14px;
+  background: #FFFFFF;
+  border-top: 1px solid #E5E7EB;
+}
+
+.sig-box {
+  flex: 1;
+}
+
+.sig-box .sig-line {
+  border-bottom: 1px dashed #6B7280;
+  height: 25px;
+  margin-bottom: 6px;
+}
+
+.sig-box p {
+  font-size: 11px;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* ==========================================================================
+   4. RECEIPTS
+   ========================================================================== */
+.receipt-card-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.receipt-card-item:hover {
+  border-color: var(--primary-teal);
+  box-shadow: var(--shadow-sm);
+}
+
+.receipt-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.receipt-no {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--dark-nav-blue);
+  font-family: var(--font-mono);
+}
+
+[data-theme="dark"] .receipt-no {
+  color: var(--nav-accent-blue);
+}
+
+.receipt-amount {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--section-green);
+  font-family: var(--font-mono);
+}
+
+.receipt-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding-top: 6px;
+  border-top: 1px dashed var(--border-color);
+}
+
+/* ==========================================================================
+   5. GATE PASS
+   ========================================================================== */
+.gate-pass-container {
+  background: var(--card-bg);
+  border: 2px solid var(--primary-teal);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 20px;
+}
+
+.gate-pass-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 56px;
+  font-weight: 900;
+  color: rgba(20, 124, 112, 0.06);
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.gate-pass-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.gate-pass-title h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--dark-nav-blue);
+  letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] .gate-pass-title h3 {
+  color: #FFFFFF;
+}
+
+.gate-pass-title p {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.gate-pass-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .gate-pass-body {
+    grid-template-columns: 120px 1fr auto;
+    align-items: center;
+  }
+}
+
+.gate-pass-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border-color);
+  object-fit: cover;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.gate-pass-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.gate-pass-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.gate-pass-qr img {
+  width: 90px;
+  height: 90px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 4px;
+  background: #FFFFFF;
+}
+
+.gate-pass-footer {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   6. HOSTEL ACCOMMODATION
+   ========================================================================== */
+.hostel-card-selector {
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--card-bg);
+}
+
+.hostel-card-selector.selected {
+  border-color: var(--primary-teal);
+  background-color: rgba(24, 201, 163, 0.06);
+}
+
+.bed-space-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 14px 0;
+}
+
+@media (min-width: 600px) {
+  .bed-space-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.bed-box {
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--card-bg);
+}
+
+.bed-box.available:hover {
+  border-color: var(--primary-teal);
+}
+
+.bed-box.selected {
+  background: var(--primary-teal);
+  color: #FFFFFF;
+  border-color: var(--deep-teal);
+}
+
+.bed-box.occupied {
+  background: var(--card-subtle);
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-style: dashed;
+}
+
+/* ==========================================================================
+   7. COURSE EVALUATION
+   ========================================================================== */
+.eval-star-group {
+  display: flex;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.eval-star {
+  font-size: 24px;
+  color: #CBD5E1;
+  cursor: pointer;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.eval-star.filled {
+  color: #F59E0B;
+}
+
+.eval-star:hover {
+  transform: scale(1.15);
+}
+
+/* ==========================================================================
+   8. OFFICIAL DOCUMENT & PRINT PREVIEW
+   ========================================================================== */
+.official-doc-container {
+  background: #FFFFFF;
+  color: #20242A;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.doc-header-block {
+  text-align: center;
+  border-bottom: 2px solid #20242A;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.doc-crest {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 6px;
+}
+
+.doc-header-block h2 {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #1E3A8A;
+}
+
+.doc-header-block h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+  margin-top: 2px;
+}
+
+.doc-student-table {
+  width: 100%;
+  margin-bottom: 16px;
+  font-size: 12.5px;
+}
+
+.doc-student-table td {
+  padding: 4px 8px;
+}
+
+.doc-signature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.sig-line {
+  border-bottom: 1px dashed #6B7280;
+  margin-bottom: 6px;
+  height: 30px;
+}

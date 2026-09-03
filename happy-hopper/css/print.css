@@ -1,0 +1,110 @@
+/* ==========================================================================
+   PRINT MEDIA STYLESHEET
+   Clean output when printing official student portal documents
+   ========================================================================== */
+
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+
+  .device-preview-bar,
+  .portal-header,
+  .hamburger-btn,
+  .nav-drawer,
+  .drawer-backdrop,
+  .no-print,
+  .btn,
+  .reg-summary-sticky,
+  .timetable-filters,
+  #toast-container {
+    display: none !important;
+  }
+
+  .app-wrapper {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  .app-container {
+    max-width: 100% !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  .main-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .portal-card,
+  .results-section-wrapper,
+  .gate-pass-container,
+  .official-doc-container {
+    border: 1px solid #CCCCCC !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .gate-pass-watermark {
+    opacity: 0.12 !important;
+  }
+
+  .results-table th,
+  .results-table td,
+  .statement-table th,
+  .statement-table td {
+    padding: 6px 8px !important;
+  }
+
+  .badge {
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+    background: transparent !important;
+  }
+
+  .doc-crest {
+    filter: grayscale(100%);
+  }
+
+  .fee-print-header,
+  .fee-print-signatures {
+    display: flex !important;
+  }
+
+  .fee-print-signatures {
+    display: flex !important;
+    gap: 40px !important;
+  }
+
+  .fee-statement-card {
+    border: none !important;
+    box-shadow: none !important;
+    background: #FFFFFF !important;
+  }
+
+  .fee-table-dark-header {
+    background-color: #111827 !important;
+    color: #FFFFFF !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .fee-table-dark-header th {
+    color: #FFFFFF !important;
+    background-color: #111827 !important;
+  }
+
+  .fee-bottom-summary-bar {
+    background: #1E2E4C !important;
+    color: #FFFFFF !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

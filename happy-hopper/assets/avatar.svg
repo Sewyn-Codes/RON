@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2F4EF" />
+      <stop offset="100%" stop-color="#C5E8DE" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8D5524" />
+      <stop offset="100%" stop-color="#6F3E18" />
+    </linearGradient>
+    <linearGradient id="scrubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18C9A3" />
+      <stop offset="100%" stop-color="#147C70" />
+    </linearGradient>
+    <clipPath id="avatarClip">
+      <circle cx="80" cy="80" r="75" />
+    </clipPath>
+  </defs>
+
+  <!-- Background Circle with subtle border -->
+  <circle cx="80" cy="80" r="78" fill="#FFFFFF" stroke="#18C9A3" stroke-width="4" />
+  <circle cx="80" cy="80" r="75" fill="url(#bgGrad)" />
+
+  <g clip-path="url(#avatarClip)">
+    <!-- Hair back -->
+    <ellipse cx="80" cy="72" rx="42" ry="46" fill="#1C140E" />
+
+    <!-- Shoulders & Nursing Scrub Top -->
+    <path d="M22,165 C22,125 45,110 80,110 C115,110 138,125 138,165 Z" fill="url(#scrubGrad)" />
+    
+    <!-- V-Neck Collar -->
+    <path d="M66,110 L80,132 L94,110 Z" fill="url(#skinGrad)" />
+    <path d="M62,110 L80,134 L98,110" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+    
+    <!-- ID Card Lanyard -->
+    <path d="M60,110 L75,152 M100,110 L85,152" stroke="#263B61" stroke-width="2" />
+    <!-- ID Badge -->
+    <rect x="72" y="148" width="16" height="22" rx="2" fill="#FFFFFF" stroke="#263B61" stroke-width="1" />
+    <rect x="75" y="152" width="10" height="4" fill="#18C9A3" />
+    <line x1="75" y1="158" x2="85" y2="158" stroke="#6B7280" stroke-width="1" />
+    <line x1="75" y1="161" x2="83" y2="161" stroke="#6B7280" stroke-width="1" />
+
+    <!-- Neck -->
+    <rect x="68" y="85" width="24" height="30" fill="url(#skinGrad)" rx="5" />
+    <!-- Shadow under chin -->
+    <ellipse cx="80" cy="92" rx="14" ry="5" fill="#583112" opacity="0.35" />
+
+    <!-- Head / Face -->
+    <ellipse cx="80" cy="74" rx="28" ry="32" fill="url(#skinGrad)" />
+
+    <!-- Ears -->
+    <ellipse cx="52" cy="75" rx="5" ry="8" fill="url(#skinGrad)" />
+    <ellipse cx="108" cy="75" rx="5" ry="8" fill="url(#skinGrad)" />
+    <!-- Pearl Earrings -->
+    <circle cx="52" cy="78" r="2.5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.5" />
+    <circle cx="108" cy="78" r="2.5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.5" />
+
+    <!-- Hair Front / Style -->
+    <path d="M52,65 C54,42 70,36 80,36 C90,36 106,42 108,65 C102,52 92,48 80,48 C68,48 58,52 52,65 Z" fill="#1C140E" />
+    <path d="M52,65 C58,52 70,48 80,50 C70,52 60,60 55,70 Z" fill="#2D1F15" />
+
+    <!-- Eyebrows -->
+    <path d="M63,64 Q70,60 75,64" stroke="#1C140E" stroke-width="2.2" stroke-linecap="round" fill="none" />
+    <path d="M85,64 Q90,60 97,64" stroke="#1C140E" stroke-width="2.2" stroke-linecap="round" fill="none" />
+
+    <!-- Eyes -->
+    <ellipse cx="69" cy="71" rx="4.5" ry="3" fill="#FFFFFF" />
+    <circle cx="69.5" cy="71" r="2.3" fill="#2E1B0F" />
+    <circle cx="70.5" cy="70" r="0.8" fill="#FFFFFF" />
+    
+    <ellipse cx="91" cy="71" rx="4.5" ry="3" fill="#FFFFFF" />
+    <circle cx="90.5" cy="71" r="2.3" fill="#2E1B0F" />
+    <circle cx="91.5" cy="70" r="0.8" fill="#FFFFFF" />
+
+    <!-- Nose -->
+    <path d="M80,72 L78,80 Q80,82 82,80 Z" fill="#583112" opacity="0.4" />
+
+    <!-- Friendly Smile -->
+    <path d="M72,86 Q80,92 88,86" stroke="#4A1E08" stroke-width="2" stroke-linecap="round" fill="none" />
+    <path d="M74,86 Q80,89 86,86" fill="#FFFFFF" />
+  </g>
+</svg>

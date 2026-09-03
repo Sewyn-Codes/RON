@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Beatrice Aluso Mukobe - Chuka University Student Portal</title>
+  
+  <!-- Favicon / Logo Icon -->
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/header-nav.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/tables-results.css" />
+  <link rel="stylesheet" href="css/features.css" />
+  <link rel="stylesheet" href="css/print.css" />
+</head>
+<body>
+
+  <!-- Top Viewport Switcher Toolbar (Mobile 390px / Tablet / Desktop) -->
+  <div id="device-toolbar-root"></div>
+
+  <!-- Main App Wrapper -->
+  <div class="app-wrapper mode-mobile" id="app-wrapper">
+    <div class="app-container" id="app-container">
+      
+      <!-- Turquoise/Green Gradient Header -->
+      <div id="header-root"></div>
+
+      <!-- Slide-in Dark Navy Navigation Drawer -->
+      <div id="drawer-root"></div>
+
+      <!-- Dynamic SPA Main Content Outlet -->
+      <main class="main-content" id="main-content-view">
+        <!-- Injected via Router -->
+      </main>
+
+      <!-- Institutional Footer -->
+      <footer class="portal-footer no-print">
+        <div>&copy; 2026 Student Academic Self-Service Portal &bull; Betty Aluso (HBS1/8115/24)</div>
+        <div class="demo-notice">Bachelor of Science in Nursing &bull; Demo Simulation Environment</div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Dynamic Modals Container (Academic Calendar, Fee Simulator, Receipt Viewer) -->
+  <div id="modals-root"></div>
+
+  <!-- Toast Notification Root -->
+  <div id="toast-container"></div>
+
+  <!-- Application Bootstrap -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

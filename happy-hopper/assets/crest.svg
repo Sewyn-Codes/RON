@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="crestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18C9A3" />
+      <stop offset="50%" stop-color="#21A89A" />
+      <stop offset="100%" stop-color="#147C70" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9D423" />
+      <stop offset="100%" stop-color="#FF4E50" />
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="76" fill="#FFFFFF" stroke="url(#crestGrad)" stroke-width="5" />
+  <circle cx="80" cy="80" r="66" fill="none" stroke="#263B61" stroke-width="1.5" stroke-dasharray="3,2" />
+  
+  <!-- Shield Background -->
+  <path d="M50,42 L110,42 Q110,95 80,118 Q50,95 50,42 Z" fill="url(#crestGrad)" stroke="#263B61" stroke-width="2.5" />
+  
+  <!-- Shield Inner Dividers -->
+  <path d="M52,78 L108,78 M80,44 L80,114" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Open Book in top-left quarter -->
+  <path d="M60,54 Q65,58 70,55 L70,68 Q65,65 60,68 Z M70,55 Q75,58 80,54 L80,68 Q75,65 70,68 Z" fill="#FFFFFF" />
+  
+  <!-- Caduceus / Health symbol in top-right quarter -->
+  <path d="M95,50 L95,70 M90,56 Q95,50 100,56 M90,62 Q95,56 100,62 M95,48 L93,52 L97,52 Z" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  
+  <!-- Sunburst in bottom-left quarter -->
+  <circle cx="65" cy="94" r="5" fill="#F9D423" />
+  <path d="M65,84 L65,87 M65,101 L65,104 M55,94 L58,94 M72,94 L75,94 M58,87 L60,89 M70,99 L72,101 M58,101 L60,99 M70,89 L72,87" stroke="#F9D423" stroke-width="1.5" />
+  
+  <!-- Olive Branch in bottom-right quarter -->
+  <path d="M95,104 Q90,92 98,84 M92,98 Q87,95 89,92 M96,93 Q101,90 99,87 M93,88 Q88,85 91,82" stroke="#FFFFFF" stroke-width="1.6" fill="none" stroke-linecap="round" />
+  
+  <!-- Laurel Wreath below shield -->
+  <path d="M42,98 Q40,124 80,136 Q120,124 118,98" fill="none" stroke="#263B61" stroke-width="3" stroke-linecap="round" />
+  <path d="M48,104 Q46,120 80,130 Q114,120 112,104" fill="none" stroke="#3E9F65" stroke-width="1.5" stroke-linecap="round" />
+  
+  <!-- Star on Top -->
+  <polygon points="80,24 83,32 91,32 84,37 87,45 80,40 73,45 76,37 69,32 77,32" fill="#F9D423" stroke="#D9A000" stroke-width="0.8" />
+  
+  <!-- Text Label -->
+  <text x="80" y="152" font-family="'Segoe UI', Arial, sans-serif" font-size="9" font-weight="700" fill="#263B61" text-anchor="middle" letter-spacing="1">STUDENT PORTAL</text>
+</svg>
