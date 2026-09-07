@@ -42,15 +42,6 @@ export function renderSettingsView() {
               </button>
             </div>
           </div>
-
-          <div class="form-group" style="margin-bottom:0;">
-            <label class="form-label">Device Display Mode</label>
-            <div style="display:flex;gap:8px;">
-              <button class="btn btn-outline btn-sm" onclick="window.portalApp.setDeviceMode('mobile')">Mobile (390px)</button>
-              <button class="btn btn-outline btn-sm" onclick="window.portalApp.setDeviceMode('tablet')">Tablet (768px)</button>
-              <button class="btn btn-outline btn-sm" onclick="window.portalApp.setDeviceMode('desktop')">Full Width Desktop</button>
-            </div>
-          </div>
         </div>
       </div>
 

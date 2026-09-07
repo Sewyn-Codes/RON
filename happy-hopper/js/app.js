@@ -7,7 +7,6 @@ import { portalState } from './state.js';
 import { Router } from './router.js';
 import { renderHeader } from './components/header.js';
 import { renderDrawer } from './components/drawer.js';
-import { renderDevicePreviewToolbar } from './components/devicePreview.js';
 import { 
   showToast, 
   openModal, 
@@ -26,10 +25,9 @@ class PortalApplication {
   }
 
   init() {
-    // Apply saved theme & viewport mode
+    // Apply saved theme
     const state = portalState.getState();
     document.documentElement.setAttribute('data-theme', state.settings.theme || 'light');
-    this.applyViewportMode(state.settings.viewportMode || 'mobile');
 
     // Render Shell Components
     this.renderShell();
@@ -49,10 +47,6 @@ class PortalApplication {
   }
 
   renderShell() {
-    // Viewport Toolbar
-    const toolbarEl = document.getElementById('device-toolbar-root');
-    if (toolbarEl) toolbarEl.innerHTML = renderDevicePreviewToolbar();
-
     // Header
     const headerEl = document.getElementById('header-root');
     if (headerEl) headerEl.innerHTML = renderHeader();
@@ -107,20 +101,7 @@ class PortalApplication {
     showToast(msg, type);
   }
 
-  // Viewport Mode Switcher
-  setDeviceMode(mode) {
-    portalState.setViewportMode(mode);
-    this.applyViewportMode(mode);
-    const toolbarEl = document.getElementById('device-toolbar-root');
-    if (toolbarEl) toolbarEl.innerHTML = renderDevicePreviewToolbar();
-  }
 
-  applyViewportMode(mode) {
-    const wrapper = document.getElementById('app-wrapper');
-    if (wrapper) {
-      wrapper.className = `app-wrapper mode-${mode}`;
-    }
-  }
 
   // Theme controls
   toggleTheme(theme) {

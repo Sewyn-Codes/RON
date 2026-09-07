@@ -280,7 +280,6 @@ const defaultState = {
   // User Settings
   settings: {
     theme: 'light',
-    viewportMode: 'desktop', // Default to desktop view or full width
     fontSize: 'normal',
     emailNotifications: true,
     smsAlerts: true
@@ -440,10 +439,7 @@ class StateManager {
     this.saveState();
   }
 
-  setViewportMode(mode) {
-    this.state.settings.viewportMode = mode;
-    this.saveState();
-  }
+
 
   resetToDefault() {
     this.state = JSON.parse(JSON.stringify(defaultState));
